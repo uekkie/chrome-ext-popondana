@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon ISBN 登録拡張",
+  "version": "1.0",
+  "description": "Amazonで書籍ISBNを送信する",
+  "permissions": [ "scripting", "activeTab" ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [ "*://www.amazon.co.jp/*" ],
+      "js": [ "content.js" ]
+    }
+  ]
+}
